@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:views="clr-namespace:nombreMagique.Views"
+             x:Class="nombreMagique.Views.GamePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <views:StarsView Grid.Row="0" 
+                             Grid.Column="0" />
+
+            <StackLayout Grid.Row="1" 
+                         Grid.Column="0"
+                         VerticalOptions="Center">
+                <Label Text="Devinez le"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{StaticResource titleColor}"
+                       HorizontalOptions="CenterAndExpand" />
+                <Label Text="nombre magique"
+                       FontSize="30"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{StaticResource titleColor}"
+                       HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="lblConsValues"
+                       Text="lblConsValues"
+                       Margin="0,10,0,0"
+                       FontSize="20"
+                       FontAttributes="Italic"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{StaticResource titleColor}"
+                       HorizontalOptions="CenterAndExpand" />
+                <Entry x:Name="numberEntry"
+                       Placeholder="?"
+                       FontSize="80"
+                       Keyboard="Numeric"
+                       Margin="0,30,0,0"
+                       WidthRequest="120"
+                       HorizontalOptions="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       PlaceholderColor="White"
+                       TextColor="White"
+                       BackgroundColor="{StaticResource shadowColor}"/>
+                <Button Text="Deviner"
+                        BackgroundColor="{StaticResource shadowColor}"
+                        TextColor="White"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+
+            <views:FooterView Grid.Row="2" 
+                              Grid.Column="0" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

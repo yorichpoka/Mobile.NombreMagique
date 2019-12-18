@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="nombreMagique.Views.WinPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="stklytMain"
+                     VerticalOptions="Center"
+                     Orientation="Vertical">
+            <Image Source="win.png"
+                   Aspect="AspectFit"
+                   HeightRequest="150"
+                   Margin="0,0,0,30"/>
+            <Label Text="Bravo !"
+                   FontSize="50"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource titleColor}"
+                   HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblMagicNumber"
+                   Text="lblMagicNumber"
+                   Margin="0,10,0,0"
+                   FontSize="20"
+                   FontAttributes="Italic"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource titleColor}"
+                   HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
